@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voice Calling App</title>
+</head>
+<body>
+    <h1>Welcome to the Voice Calling App</h1>
+    <button id="start-call">Start Call</button>
+    <div id="call-popup" style="display: none;">
+        <h3>Incoming Call</h3>
+        <button id="accept">Accept</button>
+        <button id="reject">Reject</button>
+    </div>
+    <script>
+        const startCallButton = document.getElementById('start-call');
+        const callPopup = document.getElementById('call-popup');
+        const acceptButton = document.getElementById('accept');
+        const rejectButton = document.getElementById('reject');
+
+        startCallButton.addEventListener('click', () => {
+            alert('Call initiated! (Simulated)');
+        });
+
+        acceptButton.addEventListener('click', () => {
+            callPopup.style.display = 'none';
+            alert('Call accepted! (Simulated)');
+        });
+
+        rejectButton.addEventListener('click', () => {
+            callPopup.style.display = 'none';
+            alert('Call rejected! (Simulated)');
+        });
+
+        // Simulate an incoming call
+        setTimeout(() => {
+            callPopup.style.display = 'block';
+        }, 5000);
+    </script>
+</body>
+</html>
